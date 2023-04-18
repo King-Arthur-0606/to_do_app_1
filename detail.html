@@ -1,0 +1,48 @@
+{% extends "base.html"%} 
+
+{% block body %}
+<div class="container">
+  <div class="post">
+      <h2 class="post-title">{{ post.title }}</h2>
+      <p class="post-detail">{{ post.detail }}</p>
+      <p class="post-date">{{ post.due.date() }}</p>
+  </div>
+</div>
+
+<style>
+  .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+  .post {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+  }
+
+  .post-title {
+      font-size: 2em;
+      color: #333;
+      margin-bottom: 0.5em;
+  }
+  .post-detail {
+      font-size: 1.2em;
+      color: #666;
+      margin-bottom: 1em;
+  }
+
+  .post-date {
+      font-size: 1em;
+      color: #999;
+  }
+
+
+/* リンクの設定 */
+
+
+  
+</style>
+{% endblock %}

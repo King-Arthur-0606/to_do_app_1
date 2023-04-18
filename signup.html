@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block body %}
+<h1>ユーザー登録</h1>
+
+<form method="post">
+  <label>Username</label>
+  <input type="text" name="username" required />
+  <label>Password</label>
+  <input type="password" name="password" required />
+  <input type="submit" value="sign up" />
+</form>
+
+<a
+  href="/login"
+  role="button"
+  style="
+    color: #666;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border: 1px solid #666;
+    border-radius: 4px;
+  "
+  >to login</a
+>
+
+{% endblock %}

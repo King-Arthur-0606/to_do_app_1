@@ -1,0 +1,16 @@
+{% extends "base.html"%} 
+{% block body %}
+
+<h1 style="font-size: 2em; color: #333; margin-bottom: 0.5em;">"top page"</h1>
+<a href="/create" role="button" style="color: #666; text-decoration: none; padding: 0.5em 1em; border: 1px solid #666; border-radius: 4px;">New</a>
+<a href="/logout" role="button" style="color: #666; text-decoration: none; padding: 0.5em 1em; border: 1px solid #666; border-radius: 4px;">LogOut</a>
+
+{% for post in posts %}
+<h2 style="color: #666; font-size: 1.5em; margin-bottom: 0.5em;">タイトル : {{post.title}}</h2>
+<p style="color: #999; margin-bottom: 1em;">期限: {{ post.due.date() }}</p>
+<a href="detail/{{ post.id}}" role="button" style="color: #666; text-decoration: none; padding: 0.5em 1em; border: 1px solid #666; border-radius: 4px;">Detail</a>
+<a href="update/{{ post.id}}" role="button" style="color: #666; text-decoration: none; padding: 0.5em 1em; border: 1px solid #666; border-radius: 4px;">Update</a>
+<a href="delite/{{ post.id}}" role="button" style="color: #666; text-decoration: none; padding: 0.5em 1em; border: 1px solid #666; border-radius: 4px;">Delite</a>
+{% endfor %} 
+{% endblock %}
+

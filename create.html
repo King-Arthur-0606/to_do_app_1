@@ -1,0 +1,15 @@
+{% extends "base.html"%}
+
+{% block body %}
+<form action="/" method="post" style="max-width: 500px; margin: 0 auto; padding: 2em; background-color: #f8f8f8; border: 1px solid #ccc; border-radius: 4px;">
+  <h1 style="font-size: 2em; color: #333; margin-bottom: 1em;">Create a new post</h1>
+  <label for="title" style="display: block; margin-bottom: 0.5em;">Title:</label>
+  <input type="text" name="title" style="display: block; width: 100%; padding: 0.5em; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 1em;" />
+  <label for="detail" style="display: block; margin-bottom: 0.5em;">Detail:</label>
+  <input type="text" name="detail" style="display: block; width: 100%; padding: 0.5em; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 1em;" />
+  <label for="due" style="display: block; margin-bottom: 0.5em;">Due:</label>
+  <input type="date" name="due" required style="display: block; width: 100%; padding: 0.5em; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 1em;" />
+  <input type="submit" value="Create" style="background-color: #4CAF50; color: #fff; padding: 0.5em 1em; border: none; border-radius: 4px; cursor: pointer;" />
+</form>
+{% endblock %}
+
